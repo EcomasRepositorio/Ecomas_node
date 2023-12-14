@@ -19,6 +19,8 @@ const storage = multer.diskStorage({
   },
 });
 
+router.use('/server/pdf', express.static('PDF_ECOMAS/'));
+
 const upload = multer({ storage: storage });
 
 
