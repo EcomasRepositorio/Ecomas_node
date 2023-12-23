@@ -27,14 +27,14 @@ function importarEstudiantesDesdeExcel(nombreArchivo) {
             console.error("Error al actualizar el estudiante en la base de datosxdxdxd:", error);
             return;
           }
-          console.log("Estudiante actualizado correctamentexdxddx:", estudiante.codigo);
+          console.log("Estudiante actualizado correctamente:/import excel", estudiante.codigo);
         });
       } else {
         // El estudiante no existe, así que lo inserta en la base de datos
         const insertQuery = "INSERT INTO students SET ?";
         conexion.query(insertQuery, estudiante, (error, result) => {
           if (error) {
-            console.error("Error al guardar el estudiante en la base de datos:", error);
+            console.error("Error al guardar el estudiante en la base de datos:/import excel", error);
             return;
           }
           console.log("Estudiante insertado correctamente:", estudiante.codigo);

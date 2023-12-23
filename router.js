@@ -80,7 +80,7 @@ router.post('/server/students/save', upload.single('PDF'), async (req, res) => {
         (error, result) => {
           if (error) {
             return res.status(500).json({
-              error: "Error al actualizar el participante en la base de datos",
+              error: "Error al actualizar el participante en la base de datos /router",
             });
           }
           return res
